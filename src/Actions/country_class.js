@@ -1,12 +1,44 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react
 
 // const gotoplace = <Travelcard place="Costa Rica"/>;
 
-export function travelCard() {
-    return <h1>Go to CostaRica</h1>;
-      ReactDOM.render(travelCard, document.getElementById('root'))
-  }
+export class Task extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.taskClickfunction=this.taskClickFunction.bind(this);
+    }
+    taskClickFunction(){
+
+        let randomTravel = Math.floor(Math.random() * 4)
+
+        switch (randomTravel) {
+            case 0:
+                this.taskClickFunction = 'Go to Latin America'
+                break;
+            case 1:
+                this.taskClickFunction = 'Go to Africa'
+                break;
+            case 2:
+                this.taskClickFunction = 'Go to America"
+                break;
+            case 3:
+                this.taskClickFunction = "Go to Asia"
+                break;
+        }
+    }
+
+    render() {
+        return (
+            <article>
+                <h1>React Components</h1>
+                <RippleButton onClick={this.taskClickFunction}/>
+            </article>
+        );
+    }
+}
+
 
 // ReactDOM.render(gotoplace, document.getElementById('root'))
 
