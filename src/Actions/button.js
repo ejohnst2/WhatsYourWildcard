@@ -17,30 +17,13 @@ handleChange(e) {
 
   render() {
     return (
-      <div>
-        <button
-          style={{ background: 'blue', color: 'white' }}
-          className="square" onClick={() => this.setState({value: 'X'})}
+      <div {...this.props} >
+        <button className="button" onClick={() => this.setState({value: 'X'})}
         >
           Get Your Wildcard
         </button>
-        <div>
-          {this.props.place}
-        </div>
       </div>
     );
   }
 }
 
-// _handleWildCardButtonClick() {
-//   console.log('working');
-//
-//   this.props.wildCardString === 'new';
-// }
-// WildcardButton.propTypes = {
-//   wildCardString: PropTypes.string.isRequired,
-// };
-//
-// WildcardButton.defaultProps = {
-//   wildCardString: 'Wildington',
-// };

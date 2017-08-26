@@ -1,15 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {WildcardButton} from './button';
+import {WildcardButton} from './Actions/button';
+import {TravelCard} from "./Actions/travelcard";
+import {Clock} from "./Actions/clockfunction"
 
 class App extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            clicked: false
+        };
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState({
+            clicked: true
+        });
+    }
+
   render() {
     return (
-      <div>
-        <form>
-          <input type="question" placeholder="Ask us anything about your travels, business, or relationships"/>
-        </form>
-      <WildcardButton />
+     <div style={{textAlign:'center'}}>
+
+         <Clock />
+
+        <h1 style={{textAlign: "center"}} > What's Your WildCard? </h1>
+
+         <input style={{textAlign: 'center'}} type="text" placeholder="Ask anything about your travels"/>
+
+      <WildcardButton onClick={this.handleClick} />
+
+         <br/><br/><br/><br/>
+
+         {this.state.clicked ? <TravelCard /> : null}
       </div>
     );
   }
