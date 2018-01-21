@@ -27,7 +27,7 @@ export class Clock extends React.Component {
   render() {
     return (
       <div>
-        <h2>You're only getting older {this.state.date.toLocaleTimeString()}...</h2>
+        <h2>Don't wait to find out your future {this.state.date.toLocaleTimeString()}...</h2>
       </div>
     );
   }

@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {WildcardButton} from './Actions/button';
 import {TravelCard} from "./Actions/travelcard";
-import {Clock} from "./Actions/clockfunction"
+import {Clock} from "./Actions/clockfunction";
+import {InputField} from "./Actions/question"
 
 class App extends React.Component {
     constructor() {
@@ -27,13 +28,19 @@ class App extends React.Component {
 
          <Clock />
 
-        <h1 style={{textAlign: "center"}} > What's Your WildCard? </h1>
+        <h1 style={{textAlign: "center"}} > Your Magic Eight Ball </h1>
 
-         <input style={{textAlign: 'center'}} type="text" placeholder="Ask anything about your travels"/>
+         <InputField/>
+
+         <br/><br/><br/>
+
+         <img src = "http://icons.iconarchive.com/icons/barkerbaggies/pool-ball/256/Ball-8-icon.png" />
+
+         <br/><br/><br/>
 
       <WildcardButton onClick={this.handleClick} />
 
-         <br/><br/><br/><br/>
+         <br/>
 
          {this.state.clicked ? <TravelCard /> : null}
       </div>

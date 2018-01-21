@@ -1,28 +1,31 @@
 h1 {
-    font-family: Impact;
-    color: lightseagreen;
+    color: white;
+    font-size: 48px;
+    letter-spacing: 2.5px;
+    word-spacing: 6px;
 }
 
 h2 {
-    font-family: Impact;
-    color: lightseagreen;
-}
-
-button {
-    background-color: lightseagreen;
-    font-family: Impact;
-    font-size: 16px;
     color: white;
-    padding: 15px 32px;
-    justify-content: center ;
-    width: 50%;
+    font-size: 26px;
 }
 
+.button {
+  background-color: white;
+  height:50px;
+  font-size: 16px;
+  color: black;
+  width:400px;
+}
 
 input {
-    width: 50%;
+    width: 70%;
+    height: 50px;
     padding: 12px 20px;
-    border: 2px solid lightseagreen;
+    border: 2px dotted black;
+    font-size: 24px;
+    font-family: 'Roboto Condensed', sans-serif;
+
 
 }
 
@@ -30,8 +33,7 @@ input {
     text-align: center;
 }
 
-.button {
-    position: absolute;
-    top: 20%;
+body {
+    background-color: black;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-

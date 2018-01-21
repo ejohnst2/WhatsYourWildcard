@@ -6,7 +6,6 @@ import { TravelCard } from './travelcard';
 export class WildcardButton extends React.Component {
     constructor(props) {
         super(props);
-
         this.handleChange = this.handleChange.bind(this);
 }
 
@@ -20,10 +19,9 @@ handleChange(e) {
       <div {...this.props} >
         <button className="button" onClick={() => this.setState({value: 'X'})}
         >
-          Get Your Wildcard
+          Shake it up
         </button>
       </div>
     );
   }
 }
-
